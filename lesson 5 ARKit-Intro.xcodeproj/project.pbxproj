@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B62CC1E82248EF1000EB1510 /* SnowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62CC1E72248EF1000EB1510 /* SnowModel.swift */; };
 		B6BCAB3B2248BF7700FACA1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCAB3A2248BF7700FACA1C /* AppDelegate.swift */; };
 		B6BCAB3D2248BF7700FACA1C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BCAB3C2248BF7700FACA1C /* art.scnassets */; };
 		B6BCAB3F2248BF7700FACA1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BCAB3E2248BF7700FACA1C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B62CC1E72248EF1000EB1510 /* SnowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowModel.swift; sourceTree = "<group>"; };
 		B6BCAB372248BF7700FACA1C /* lesson 5 ARKit-Intro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lesson 5 ARKit-Intro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BCAB3A2248BF7700FACA1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BCAB3C2248BF7700FACA1C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -37,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B62CC1E52248EEE900EB1510 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6BCAB3E2248BF7700FACA1C /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B62CC1E62248EEF700EB1510 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B62CC1E72248EF1000EB1510 /* SnowModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B6BCAB2E2248BF7700FACA1C = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +74,10 @@
 		B6BCAB392248BF7700FACA1C /* lesson 5 ARKit-Intro */ = {
 			isa = PBXGroup;
 			children = (
+				B62CC1E62248EEF700EB1510 /* Model */,
+				B62CC1E52248EEE900EB1510 /* ViewController */,
 				B6BCAB3A2248BF7700FACA1C /* AppDelegate.swift */,
 				B6BCAB3C2248BF7700FACA1C /* art.scnassets */,
-				B6BCAB3E2248BF7700FACA1C /* ViewController.swift */,
 				B6BCAB402248BF7700FACA1C /* Main.storyboard */,
 				B6BCAB432248BF7B00FACA1C /* Assets.xcassets */,
 				B6BCAB452248BF7B00FACA1C /* LaunchScreen.storyboard */,
@@ -139,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62CC1E82248EF1000EB1510 /* SnowModel.swift in Sources */,
 				B6BCAB3F2248BF7700FACA1C /* ViewController.swift in Sources */,
 				B6BCAB3B2248BF7700FACA1C /* AppDelegate.swift in Sources */,
 			);

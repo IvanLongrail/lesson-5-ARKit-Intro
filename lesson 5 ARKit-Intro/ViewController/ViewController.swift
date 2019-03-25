@@ -12,20 +12,28 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    var snowIntensity:Int = 20
+    var timer:Timer?
+    
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var startSnowfallButton: UIButton!
+    @IBOutlet weak var stopSnowfallButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stopSnowfallButton.isHidden = true
         
         // Set the view's delegate
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
+        sceneView.debugOptions = [.showWorldOrigin, .showFeaturePoints]
+
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
+        let scene = SCNScene(named: "art.scnassets/city/city.scn")!
+
         // Set the scene to the view
         sceneView.scene = scene
     }
@@ -46,30 +54,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
-    // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
+    @IBAction func startSnowfall() {
+        snowfall()
+        startSnowfallButton.isHidden = true
+        stopSnowfallButton.isHidden = false
     }
     
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
+    @IBAction func stopSnowfall() {
+        endingSnowfall()
+        stopSnowfallButton.isHidden = true
+        startSnowfallButton.isHidden = false
     }
     
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
 }
