@@ -12,7 +12,7 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
-    var snowIntensity:Int = 20
+    var snowIntensity:Int = 40
     var timer:Timer?
     
     @IBOutlet var sceneView: ARSCNView!
